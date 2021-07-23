@@ -16,3 +16,10 @@ Feature: Examples of Cucumber data table implementations
     # To fix pipes' order
       #MAC: command + option + L
       #Windows : control + alt + L
+ @wip
+  Scenario: Library login example using data table
+    Given user is on the login page of Library app
+    When user enters username and password as below
+      | username | librarian23@library.com |
+      | password | 9rf6axdD                |
+    Then user should see title is Library
