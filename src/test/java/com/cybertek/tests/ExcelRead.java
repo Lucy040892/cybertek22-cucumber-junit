@@ -31,6 +31,19 @@ public class ExcelRead {
         //Indexes start from 0
         System.out.println("sheet.getRow(1).getCell(0) = " + sheet.getRow(1).getCell(0));
 
+        //Print out Singer's cell
+        System.out.println("sheet.getRow(3).getCell(2) = " + sheet.getRow(3).getCell(2));
+
+        //Return the count of used cells only
+        //If there are cells not used, they will not be counted
+        //It will not count empty rows or cells
+        //Starts counting from 1
+        int usedRows = sheet.getPhysicalNumberOfRows();
+
+        //Return the number from the top cell to bottom cell
+        //It does not care if there are empty cells or not
+        //Starts counting from 0
+        int lastUsedRow = sheet.getLastRowNum();
     }
 
 }
